@@ -14,7 +14,7 @@ RUN pixi shell-hook -s bash > /shell-hook
 
 ENV PYTHONUNBUFFERED=1
 
-COPY default.py .
+COPY dummy.py .
 
 RUN mkdir /etc/tiled
 RUN mkdir /.prefect -m 0777
@@ -24,4 +24,3 @@ RUN /bin/bash /shell-hook
 
 #now reapply deployment to push the image that is being created
 ENTRYPOINT ["pixi", "run"]
-CMD ["python", "-m", "default", "arg"]
