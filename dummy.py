@@ -1,6 +1,4 @@
-from prefect import flow, get_run_logger
-from prefect.blocks.system import Secret
-from tiled.client import from_profile
+from prefect import flow, get_run_logger  # noqa: F401
 
 
 @flow
