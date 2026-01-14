@@ -4,7 +4,7 @@ from prefect import flow, task, get_run_logger
 from prefect.blocks.system import Secret
 from tiled.client import from_profile
 
-BEAMLINE_OR_ENDSTATION = "!!! Set the endstation or beamline_TLA here !!!"
+BEAMLINE_OR_ENDSTATION = "hxn"
 
 
 @task(retries=2, retry_delay_seconds=10)
