@@ -28,11 +28,8 @@ deployments:
           TILED_SITE_PROFILES: /nsls2/software/etc/tiled/profiles
         image: ghcr.io/nsls2/hxn-als-workflows:main
         image_pull_policy: Always
-        network: slirp4netns
         volumes:
           - /nsls2/data/hxn/proposals:/nsls2/data/hxn/proposals
           - /nsls2/software/etc/tiled:/nsls2/software/etc/tiled
-        container_create_kwargs:
-          userns_mode: "keep-id:uid=402975,gid=402975" # workflow-hxn:workflow-hxn
         auto_remove: true
       name: hxn-work-pool-docker
