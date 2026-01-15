@@ -14,7 +14,7 @@ pull:
 
 deployments:
   - name: hxn-als-docker
-    version: 0.1.1
+    version: 0.1.2
     tags:
       - hxn
       - main
@@ -29,7 +29,6 @@ deployments:
         image: ghcr.io/nsls2/hxn-als-workflows:main
         image_pull_policy: Always
         volumes:
-          - /nsls2/data/hxn/proposals:/nsls2/data/hxn/proposals
           - /nsls2/software/etc/tiled:/nsls2/software/etc/tiled
         auto_remove: true
       name: hxn-work-pool-docker
