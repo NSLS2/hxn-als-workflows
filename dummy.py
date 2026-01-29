@@ -13,4 +13,4 @@ def handle_uri(uri_in="https://tiled.nsls2.bnl.gov", uri_out="https://tiled.nsls
     writer.write_array(reader.read(), access_tags=['tst_sandbox'])
 
     logger = get_run_logger()
-    logger.info(list(writer))
+    logger.info(list(writer.read()))
