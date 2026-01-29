@@ -10,7 +10,7 @@ def handle_uri(uri_in="https://tiled.nsls2.bnl.gov", uri_out="https://tiled.nsls
     reader = from_uri(uri_in, api_key=api_key_value)
     writer = from_uri(uri_out, api_key=api_key_value)
     
-    writer.write_array(reader.read(), access_tags=['tst_sandbox'])
+    new_array = writer.write_array(reader.read(), access_tags=['tst_sandbox'])
 
     logger = get_run_logger()
-    logger.info(list(writer.data()))
+    logger.info(list(new_array.read()))
