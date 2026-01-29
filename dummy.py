@@ -9,6 +9,8 @@ def handle_uri(uri_in="https://tiled.nsls2.bnl.gov", uri_out="https://tiled.nsls
     
     reader = from_uri(uri_in, api_key=api_key_value)
     writer = from_uri(uri_out, api_key=api_key_value)
+    
+    writer.write_array(reader.read(), persist=False)
 
     logger = get_run_logger()
-    logger.info(list(reader.metadata))
+    logger.info(list(writer))
