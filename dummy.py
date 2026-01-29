@@ -1,5 +1,4 @@
 from prefect import flow, get_run_logger
-import scipy
 from tiled.client import from_uri
 
 
