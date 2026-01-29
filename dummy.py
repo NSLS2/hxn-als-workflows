@@ -11,4 +11,4 @@ def handle_uri(uri_in="https://tiled.nsls2.bnl.gov", uri_out="https://tiled.nsls
     writer = from_uri(uri_out, api_key=api_key_value)
 
     logger = get_run_logger()
-    logger.info(list(reader))
+    logger.info(list(reader.metadata))
